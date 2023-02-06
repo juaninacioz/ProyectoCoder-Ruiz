@@ -1,0 +1,11 @@
+header {
+  grid-area: header;
+  grid-column: 1/ 5;
+  height: 166px;
+}
+
+@media (max-width: 960px) {
+  header {
+    height: 166px;
+  }
+}

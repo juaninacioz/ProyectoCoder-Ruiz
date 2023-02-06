@@ -1,0 +1,127 @@
+#index {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 480px repeat(3, 375px);
+  grid-template-areas:
+    "h-10 h-10 h-10 h-10"
+    "h-1 h-2 h-2 h-3"
+    "h-4 h-4 h-5 h-6"
+    "h-7 h-8 h-8 h-9";
+  grid-row-gap: 25px;
+  grid-column-gap: 25px;
+  background: rgb(190, 130, 142);
+  background: linear-gradient(
+    90deg,
+    rgb(153, 65, 83) 2%,
+    rgba(204, 43, 62, 1) 39%,
+    rgba(130, 30, 32, 1) 64%
+  );
+  padding: 25px;
+  section {
+    grid-area: section;
+    @include sectionIndex;
+    grid-row-gap: 3px;
+    grid-column-gap: 3px;
+    border-radius: 3%;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    img {
+      width: $medida;
+      height: $medida;
+      object-fit: cover;
+      border-radius: 3%;
+    }
+  }
+  .hijo_1 {
+    grid-area: h-1;
+  }
+  .hijo_2 {
+    grid-area: h-2;
+  }
+  .hijo_3 {
+    grid-area: h-3;
+  }
+  .hijo_4 {
+    grid-area: h-4;
+    background-color: #262929;
+ 
+  }
+  .hijo_5 {
+    grid-area: h-5;
+  }
+  .hijo_6 {
+    grid-area: h-6;
+  }
+  .hijo_7 {
+    grid-area: h-7;
+  }
+  .hijo_8 {
+    grid-area: h-8;
+  }
+
+  .hijo_9 {
+    grid-area: h-9;
+  }
+  .hijo_10 {
+    grid-area: h-10;
+    border-radius: none;
+  }
+}
+@media (max-width: 1300px) {
+  #index {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 480px repeat(3, 375px);
+  grid-template-areas:
+    "h-10 h-10 h-10 h-10"
+    "h-1 h-2 h-2 h-3"
+    "h-4 h-4 h-5 h-6"
+    "h-7 h-8 h-8 h-9";
+
+  }
+}
+
+
+@media (max-width: 960px) {
+  #index {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 400px repeat(6, auto);
+    grid-template-areas:
+      "h-10 h-10"
+      "h-1 h-3"
+      "h-2 h-2"
+      "h-5 h-6"
+      "h-4 h-4"
+      "h-7 h-9"
+      "h-8 h-8";
+  }
+}
+
+@media (max-width: 600px) {
+  #index {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 350px repeat(6, auto);
+    grid-template-areas:
+      "h-10 h-10"
+      "h-1 h-3"
+      "h-2 h-2"
+      "h-5 h-6"
+      "h-4 h-4"
+      "h-7 h-9"
+      "h-8 h-8";
+  }
+}
+
+@media (max-width: 480px) {
+  #index {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 200px repeat(6, auto);
+    grid-template-areas:
+      "h-10 h-10"
+      "h-1 h-3"
+      "h-2 h-2"
+      "h-5 h-6"
+      "h-4 h-4"
+      "h-7 h-9"
+      "h-8 h-8";
+  }
+}

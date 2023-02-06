@@ -1,0 +1,91 @@
+footer {
+  background-color: #262929;
+  grid-area: footer;
+  grid-column: 1/ 5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 3rem;
+
+  .Redes {
+    width: 100%;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .boton {
+      font-style: none;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        color: $colorBlanco;
+      }
+    }
+
+    .Redes_hijos {
+      .logoRed {
+        width: 21px;
+        height: 21px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  footer div {
+    @include footerMovile-1200-800;
+    height: max-content;
+
+    .logoRed {
+      width: 5px;
+      height: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  footer div {
+    @include footerMovile-1200-800;
+    height: max-content;
+    padding: 5px;
+
+    .logoRed {
+      width: 5px;
+      height: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer div {
+    @include footerMovile-600-300;
+    height: max-content;
+
+    .Redes_hijos {
+      .logoRed {
+        width: 5px;
+        height: 5px;
+        border-radius: 30%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  footer div {
+    @include footerMovile-600-300;
+
+    .Redes_hijos {
+      .logoRed {
+        width: 5px;
+        height: 5px;
+        border-radius: 30%;
+      }
+    }
+  }
+}

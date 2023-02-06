@@ -1,0 +1,49 @@
+@mixin sectionIndex {
+  grid-row: auto;
+  grid-column: auto;
+  // background-color: black;
+}
+
+@mixin grillaMovile-1200-900 {
+  width: $medida;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+@mixin grillaMovile-600-300 {
+  width: $medida;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "header  "
+    "main  "
+    "footer ";
+}
+
+@mixin footerMovile-1200-800 {
+  background-color: rgb(38, 41, 41);
+  grid-area: footer;
+  grid-column: 1f 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  overflow-y: hidden;
+}
+
+@mixin footerMovile-600-300 {
+  background-color: rgb(38, 41, 41);
+  grid-area: footer;
+  grid-column: 1f 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  overflow-y: hidden;
+}

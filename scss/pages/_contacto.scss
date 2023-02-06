@@ -1,0 +1,114 @@
+#Contacto {
+  overflow-y: hidden;
+  padding: 100px;
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #232526, #414345);
+  background: linear-gradient(to right, #232526, #414345);
+  grid-area: main;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  .datosContacto {
+    h2 {
+      color: $colorBlanco;
+      overflow-y: hidden;
+      text-align: center;
+      font-weight: bold;
+    }
+    h3 {
+      color: $colorBlanco;
+      overflow-y: hidden;
+    }
+    ul {
+      li {
+        color: $colorBlanco;
+        list-style: none;
+        i {
+          padding-right: 15px;
+        }
+        a {
+          color: $colorBlanco;
+        }
+      }
+    }
+  }
+  form {
+    width: 350px;
+    color: $colorBlanco;
+    margin-bottom: 40px;
+    label {
+      font-size: 20px;
+      display: block;
+      width: $medida;
+      padding: 10px;
+      text-align: center;
+    }
+    input,
+    textarea {
+      margin-bottom: 20px;
+      width: $medida;
+      padding: 5px;
+      box-sizing: border-box;
+      border: 1px solid $colorNegro;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  #Contacto {
+    overflow-y: hidden;
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #232526, #414345);
+    background: linear-gradient(to right, #232526, #414345);
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .datosContacto {
+      h2 {
+        color: $colorBlanco;
+        overflow-y: hidden;
+        text-align: center;
+        font-weight: bold;
+      }
+      h3 {
+        color: $colorBlanco;
+        overflow-y: hidden;
+      }
+      ul {
+        li {
+          color: $colorBlanco;
+
+          i {
+            padding-right: 15px;
+          }
+
+          a {
+            color: $colorBlanco;
+          }
+        }
+      }
+    }
+    form {
+      width: 350px;
+      color: $colorBlanco;
+      margin-bottom: 40px;
+      label {
+        font-size: 20px;
+        display: block;
+        width: $medida;
+        padding: 10px;
+        text-align: center;
+      }
+      input,
+      textarea {
+        margin-bottom: 20px;
+        width: $medida;
+        padding: 5px;
+        box-sizing: border-box;
+        border: 1px solid $colorNegro;
+      }
+    }
+  }
+}

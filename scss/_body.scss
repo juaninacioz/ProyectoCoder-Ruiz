@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#grilla {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 166px auto 50px;
+  grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "footer footer footer footer";
+}
+@media screen and (max-width: 1200px) {
+  #grilla {
+    @include grillaMovile-1200-900;
+  }
+}
+@media screen and (max-width: 900px) {
+  #grilla {
+    @include grillaMovile-1200-900;
+  }
+}
+@media screen and (max-width: 600px) {
+  #grilla {
+    @include grillaMovile-600-300;
+  }
+}
+@media screen and (max-width: 300px) {
+  #grilla {
+    @include grillaMovile-600-300;
+  }
+}

@@ -1,0 +1,54 @@
+.card {
+  margin: 15px;
+
+  img {
+    position: relative;
+
+    .image-container:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .btn-primary {
+    background-color: black;
+    border-color: black;
+  }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  background-color: none;
+  border: none;
+  opacity: 100%;
+  width: auto;
+  background-color: transparent;
+
+  .my-icon-class {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.carousel-control-next:hover {
+  background-color: none;
+  border: none;
+  opacity: 100%;
+  width: auto;
+  background-color: transparent;
+}
+
+.carousel-control-next:active {
+  background-color: none;
+  border: none;
+  opacity: 100%;
+  width: auto;
+  background-color: transparent;
+}

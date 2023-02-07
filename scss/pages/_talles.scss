@@ -28,9 +28,7 @@
     }
   }
 }
-section:first-child {
-  padding: 0;
-}
+
 .fondo {
   grid-area: t-0;
   img {
@@ -49,4 +47,20 @@ section:first-child {
 }
 .talle_item4 {
   grid-area: h-4;
+}
+
+@media (max-width: 900px) {
+  #talle {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows:auto repeat(4, 1fr);
+    grid-template-areas:
+      "t-0 t-0"
+      "h-1 h-1" 
+      "h-2 h-2"
+      "h-3 h-3" 
+      "h-4 h-4";
+
+  }
 }

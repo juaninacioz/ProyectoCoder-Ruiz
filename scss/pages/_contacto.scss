@@ -112,3 +112,81 @@
     }
   }
 }
+
+@media screen and (max-width: 460px) {
+  #Contacto {
+    overflow-y: hidden;
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #232526, #414345);
+    background: linear-gradient(to right, #232526, #414345);
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .datosContacto {
+      overflow-y: hidden;
+      
+      h2 {
+        color: $colorBlanco;
+        overflow-y: hidden;
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px;
+      }
+      h3 {
+        color: $colorBlanco;
+        overflow-y: hidden;
+        font-size: medium;
+      }
+      ul {
+        overflow-y: hidden;
+        font-size: 20px;
+        li {
+          color: $colorBlanco;
+          font-size: 15px;
+
+          i {
+            padding-right: 15px;
+          }
+
+          a {
+            color: $colorBlanco;
+          }
+        }
+      }
+    }
+
+    .ubicacion {
+    iframe {
+
+      width: 250px;
+      height: auto;
+      overflow-y: hidden;
+
+    }}
+
+
+    form {
+      overflow-y: hidden;
+      width: 200px;
+      color: $colorBlanco;
+      margin-bottom: 0px;
+      label {
+        font-size: 15px;
+        display: block;
+        width: 200px;
+        padding: 10px;
+        text-align: center;
+      }
+      input,
+      textarea {
+        margin-bottom: 10px;
+        width: $medida;
+        padding: 5px;
+        box-sizing: border-box;
+        border: 1px solid $colorNegro;
+      }
+    }
+  }
+}

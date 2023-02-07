@@ -100,7 +100,8 @@ nav {
     grid-area: h-3; }
   #index .hijo_4 {
     grid-area: h-4;
-    background-color: #262929; }
+    background-color: #262929;
+    object-fit: fill; }
   #index .hijo_5 {
     grid-area: h-5; }
   #index .hijo_6 {
@@ -115,25 +116,19 @@ nav {
     grid-area: h-10;
     border-radius: none; }
 
-@media (max-width: 1300px) {
-  #index {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 480px repeat(3, 375px);
-    grid-template-areas: "h-10 h-10 h-10 h-10" "h-1 h-2 h-2 h-3" "h-4 h-4 h-5 h-6" "h-7 h-8 h-8 h-9"; } }
-
-@media (max-width: 960px) {
+@media screen and (max-width: 960px) {
   #index {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 400px repeat(6, auto);
     grid-template-areas: "h-10 h-10" "h-1 h-3" "h-2 h-2" "h-5 h-6" "h-4 h-4" "h-7 h-9" "h-8 h-8"; } }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   #index {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 350px repeat(6, auto);
     grid-template-areas: "h-10 h-10" "h-1 h-3" "h-2 h-2" "h-5 h-6" "h-4 h-4" "h-7 h-9" "h-8 h-8"; } }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   #index {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 200px repeat(6, auto);
@@ -437,6 +432,62 @@ footer {
         box-sizing: border-box;
         border: 1px solid #000000; } }
 
+@media screen and (max-width: 460px) {
+  #Contacto {
+    overflow-y: hidden;
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #232526, #414345);
+    background: linear-gradient(to right, #232526, #414345);
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+    #Contacto .datosContacto {
+      overflow-y: hidden; }
+      #Contacto .datosContacto h2 {
+        color: #ffffff;
+        overflow-y: hidden;
+        text-align: center;
+        font-weight: bold;
+        font-size: 30px; }
+      #Contacto .datosContacto h3 {
+        color: #ffffff;
+        overflow-y: hidden;
+        font-size: medium; }
+      #Contacto .datosContacto ul {
+        overflow-y: hidden;
+        font-size: 20px; }
+        #Contacto .datosContacto ul li {
+          color: #ffffff;
+          font-size: 15px; }
+          #Contacto .datosContacto ul li i {
+            padding-right: 15px; }
+          #Contacto .datosContacto ul li a {
+            color: #ffffff; }
+    #Contacto .ubicacion iframe {
+      width: 250px;
+      height: auto;
+      overflow-y: hidden; }
+    #Contacto form {
+      overflow-y: hidden;
+      width: 200px;
+      color: #ffffff;
+      margin-bottom: 0px; }
+      #Contacto form label {
+        font-size: 15px;
+        display: block;
+        width: 200px;
+        padding: 10px;
+        text-align: center; }
+      #Contacto form input,
+      #Contacto form textarea {
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        border: 1px solid #000000; } }
+
 #talle {
   grid-area: main;
   display: grid;
@@ -455,9 +506,6 @@ footer {
     #talle section th {
       text-align: center; }
 
-section:first-child {
-  padding: 0; }
-
 .fondo {
   grid-area: t-0; }
   .fondo img {
@@ -475,6 +523,14 @@ section:first-child {
 
 .talle_item4 {
   grid-area: h-4; }
+
+@media (max-width: 900px) {
+  #talle {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto repeat(4, 1fr);
+    grid-template-areas: "t-0 t-0" "h-1 h-1"  "h-2 h-2" "h-3 h-3"  "h-4 h-4"; } }
 
 #productos {
   grid-area: main;

@@ -8,16 +8,11 @@
     "h-1 h-2 h-2 h-3"
     "h-4 h-4 h-5 h-6"
     "h-7 h-8 h-8 h-9";
-  grid-row-gap: 25px;
-  grid-column-gap: 25px;
-  background: rgb(190, 130, 142);
-  background: linear-gradient(
-    90deg,
-    rgb(153, 65, 83) 2%,
-    rgba(204, 43, 62, 1) 39%,
-    rgba(130, 30, 32, 1) 64%
-  );
-  padding: 25px;
+
+  @include gradiente-roja;
+  grid-row-gap: $Pixel;
+  grid-column-gap: $Pixel;
+  padding: $Pixel;
   section {
     grid-area: section;
     @include sectionIndex;
@@ -44,7 +39,11 @@
   .hijo_4 {
     grid-area: h-4;
     background-color: #262929;
-    object-fit:fill;
+    img {
+
+      height: 375px;
+    }
+   
   
   }
   .hijo_5 {
@@ -58,6 +57,7 @@
   }
   .hijo_8 {
     grid-area: h-8;
+   
   }
 
   .hijo_9 {
@@ -97,8 +97,19 @@
       "h-4 h-4"
       "h-7 h-9"
       "h-8 h-8";
+
+      .hijo_4 {
+        grid-area: h-4;
+        background-color: #262929;
+        img {
+    
+          height: auto;
+        }
+       
+    }
   }
 }
+ 
 
 @media screen and (max-width: 480px) {
   #index {

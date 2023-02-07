@@ -8,15 +8,9 @@
     "h-1 h-1 h-2 h-2"
     "h-3 h-3 h-4 h-4";
 
-  grid-row-gap: 25px;
-  grid-column-gap: 25px;
-  background: rgb(190, 130, 142);
-  background: linear-gradient(
-    90deg,
-    rgb(153, 65, 83) 2%,
-    rgba(204, 43, 62, 1) 39%,
-    rgba(130, 30, 32, 1) 64%
-  );
+  grid-row-gap: $Pixel;
+  grid-column-gap: $Pixel;
+  @include gradiente-roja;
   section {
     padding: 35px;
     h2 {
@@ -32,7 +26,7 @@
 .fondo {
   grid-area: t-0;
   img {
-    width: 100%;
+    width: $medida;
   }
 }
 .talle_item1 {
@@ -49,7 +43,7 @@
   grid-area: h-4;
 }
 
-@media (max-width: 900px) {
+@media screen and  (max-width: 900px) {
   #talle {
     grid-area: main;
     display: grid;

@@ -1,9 +1,7 @@
 #Contacto {
   overflow-y: hidden;
   padding: 100px;
-  background: #232526;
-  background: -webkit-linear-gradient(to right, #232526, #414345);
-  background: linear-gradient(to right, #232526, #414345);
+  @include gradiente-gris;
   grid-area: main;
   display: flex;
   flex-direction: row;
@@ -12,13 +10,11 @@
   .datosContacto {
     h2 {
       color: $colorBlanco;
-      overflow-y: hidden;
       text-align: center;
       font-weight: bold;
     }
     h3 {
       color: $colorBlanco;
-      overflow-y: hidden;
     }
     ul {
       li {
@@ -57,6 +53,7 @@
 @media screen and (max-width: 1000px) {
   #Contacto {
     overflow-y: hidden;
+    padding: 60px 0 60px 0;
     background: #232526;
     background: -webkit-linear-gradient(to right, #232526, #414345);
     background: linear-gradient(to right, #232526, #414345);
@@ -68,13 +65,11 @@
     .datosContacto {
       h2 {
         color: $colorBlanco;
-        overflow-y: hidden;
         text-align: center;
         font-weight: bold;
       }
       h3 {
         color: $colorBlanco;
-        overflow-y: hidden;
       }
       ul {
         li {
@@ -116,6 +111,7 @@
 @media screen and (max-width: 460px) {
   #Contacto {
     overflow-y: hidden;
+    padding: 60px 0 60px 0;
     background: #232526;
     background: -webkit-linear-gradient(to right, #232526, #414345);
     background: linear-gradient(to right, #232526, #414345);
@@ -124,23 +120,19 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
     .datosContacto {
-      overflow-y: hidden;
-      
       h2 {
         color: $colorBlanco;
-        overflow-y: hidden;
         text-align: center;
         font-weight: bold;
         font-size: 30px;
       }
       h3 {
         color: $colorBlanco;
-        overflow-y: hidden;
         font-size: medium;
       }
       ul {
-        overflow-y: hidden;
         font-size: 20px;
         li {
           color: $colorBlanco;
@@ -158,17 +150,13 @@
     }
 
     .ubicacion {
-    iframe {
-
-      width: 250px;
-      height: auto;
-      overflow-y: hidden;
-
-    }}
-
+      iframe {
+        width: 250px;
+        height: auto;
+      }
+    }
 
     form {
-      overflow-y: hidden;
       width: 200px;
       color: $colorBlanco;
       margin-bottom: 0px;

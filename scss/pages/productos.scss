@@ -9,13 +9,11 @@
     "h2 h2 h2 h2"
     "h3 h3 h3 h3"
     "h4 h4 h4 h4";
-    background: #232526;
-    background: -webkit-linear-gradient(to right, #232526, #414345);
-    background: linear-gradient(to right, #232526, #414345);
+    @include gradiente-gris;
   section {
-    padding: 25px;
+    padding: $Pixel;
     h1 {
-      background-color: black;
+      background-color: $colorNegro;
       padding: 30px;
       color: $colorBlanco;
       text-align: center;
@@ -27,7 +25,7 @@
   .fondo {
     grid-area: t-0;
     img {
-      width: 100%;
+      width: $medida;
     }
   }
   .productosItem1 {

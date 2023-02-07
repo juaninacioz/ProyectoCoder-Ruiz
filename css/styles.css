@@ -74,10 +74,10 @@ nav {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 480px repeat(3, 375px);
   grid-template-areas: "h-10 h-10 h-10 h-10" "h-1 h-2 h-2 h-3" "h-4 h-4 h-5 h-6" "h-7 h-8 h-8 h-9";
-  grid-row-gap: 25px;
-  grid-column-gap: 25px;
   background: #be828e;
   background: linear-gradient(90deg, #994153 2%, #cc2b3e 39%, #821e20 64%);
+  grid-row-gap: 25px;
+  grid-column-gap: 25px;
   padding: 25px; }
   #index section {
     grid-area: section;
@@ -100,8 +100,9 @@ nav {
     grid-area: h-3; }
   #index .hijo_4 {
     grid-area: h-4;
-    background-color: #262929;
-    object-fit: fill; }
+    background-color: #262929; }
+    #index .hijo_4 img {
+      height: 375px; }
   #index .hijo_5 {
     grid-area: h-5; }
   #index .hijo_6 {
@@ -126,7 +127,12 @@ nav {
   #index {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 350px repeat(6, auto);
-    grid-template-areas: "h-10 h-10" "h-1 h-3" "h-2 h-2" "h-5 h-6" "h-4 h-4" "h-7 h-9" "h-8 h-8"; } }
+    grid-template-areas: "h-10 h-10" "h-1 h-3" "h-2 h-2" "h-5 h-6" "h-4 h-4" "h-7 h-9" "h-8 h-8"; }
+    #index .hijo_4 {
+      grid-area: h-4;
+      background-color: #262929; }
+      #index .hijo_4 img {
+        height: auto; } }
 
 @media screen and (max-width: 480px) {
   #index {
@@ -146,10 +152,10 @@ nav {
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5); }
+      background-color: #000000; }
   .card .btn-primary {
-    background-color: black;
-    border-color: black; }
+    background-color: #000000;
+    border-color: #000000; }
 
 .carousel-control-next,
 .carousel-control-prev {
@@ -275,6 +281,9 @@ footer {
   padding: 25px; }
   #nosotros section {
     border-radius: 3%;
+    background: #232526;
+    background: -webkit-linear-gradient(to right, #232526, #414345);
+    background: linear-gradient(to right, #232526, #414345);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); }
   #nosotros h3,
   #nosotros p {
@@ -282,7 +291,7 @@ footer {
     font-family: "Roboto", sans-serif;
     font-family: "Saira Condensed", sans-serif;
     font-size: 25px;
-    color: white;
+    color: #ffffff;
     text-align: justify;
     padding: 15px; }
   #nosotros .fondo {
@@ -290,13 +299,7 @@ footer {
     #nosotros .fondo img {
       width: 100%; }
   #nosotros .nosotros_h1 {
-    grid-area: n-1;
-    background: #232526;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #414345, #232526);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #414345, #232526);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+    grid-area: n-1; }
   #nosotros .nosotros_h2 {
     grid-area: n-2; }
     #nosotros .nosotros_h2 img {
@@ -326,7 +329,7 @@ footer {
     width: 100%;
     height: auto; }
 
-@media (max-width: 1300px) {
+@media screen and (max-width: 1300px) {
   #nosotros {
     grid-area: main;
     display: grid;
@@ -337,7 +340,7 @@ footer {
     #nosotros p {
       font-size: 20px; } }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   #nosotros {
     grid-area: main;
     display: grid;
@@ -358,12 +361,10 @@ footer {
   align-items: center; }
   #Contacto .datosContacto h2 {
     color: #ffffff;
-    overflow-y: hidden;
     text-align: center;
     font-weight: bold; }
   #Contacto .datosContacto h3 {
-    color: #ffffff;
-    overflow-y: hidden; }
+    color: #ffffff; }
   #Contacto .datosContacto ul li {
     color: #ffffff;
     list-style: none; }
@@ -392,6 +393,7 @@ footer {
 @media screen and (max-width: 1000px) {
   #Contacto {
     overflow-y: hidden;
+    padding: 60px 0 60px 0;
     background: #232526;
     background: -webkit-linear-gradient(to right, #232526, #414345);
     background: linear-gradient(to right, #232526, #414345);
@@ -402,12 +404,10 @@ footer {
     align-items: center; }
     #Contacto .datosContacto h2 {
       color: #ffffff;
-      overflow-y: hidden;
       text-align: center;
       font-weight: bold; }
     #Contacto .datosContacto h3 {
-      color: #ffffff;
-      overflow-y: hidden; }
+      color: #ffffff; }
     #Contacto .datosContacto ul li {
       color: #ffffff; }
       #Contacto .datosContacto ul li i {
@@ -435,6 +435,7 @@ footer {
 @media screen and (max-width: 460px) {
   #Contacto {
     overflow-y: hidden;
+    padding: 60px 0 60px 0;
     background: #232526;
     background: -webkit-linear-gradient(to right, #232526, #414345);
     background: linear-gradient(to right, #232526, #414345);
@@ -443,34 +444,27 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     align-items: center; }
-    #Contacto .datosContacto {
-      overflow-y: hidden; }
-      #Contacto .datosContacto h2 {
+    #Contacto .datosContacto h2 {
+      color: #ffffff;
+      text-align: center;
+      font-weight: bold;
+      font-size: 30px; }
+    #Contacto .datosContacto h3 {
+      color: #ffffff;
+      font-size: medium; }
+    #Contacto .datosContacto ul {
+      font-size: 20px; }
+      #Contacto .datosContacto ul li {
         color: #ffffff;
-        overflow-y: hidden;
-        text-align: center;
-        font-weight: bold;
-        font-size: 30px; }
-      #Contacto .datosContacto h3 {
-        color: #ffffff;
-        overflow-y: hidden;
-        font-size: medium; }
-      #Contacto .datosContacto ul {
-        overflow-y: hidden;
-        font-size: 20px; }
-        #Contacto .datosContacto ul li {
-          color: #ffffff;
-          font-size: 15px; }
-          #Contacto .datosContacto ul li i {
-            padding-right: 15px; }
-          #Contacto .datosContacto ul li a {
-            color: #ffffff; }
+        font-size: 15px; }
+        #Contacto .datosContacto ul li i {
+          padding-right: 15px; }
+        #Contacto .datosContacto ul li a {
+          color: #ffffff; }
     #Contacto .ubicacion iframe {
       width: 250px;
-      height: auto;
-      overflow-y: hidden; }
+      height: auto; }
     #Contacto form {
-      overflow-y: hidden;
       width: 200px;
       color: #ffffff;
       margin-bottom: 0px; }
@@ -524,7 +518,7 @@ footer {
 .talle_item4 {
   grid-area: h-4; }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   #talle {
     grid-area: main;
     display: grid;
@@ -544,7 +538,7 @@ footer {
   #productos section {
     padding: 25px; }
     #productos section h1 {
-      background-color: black;
+      background-color: #000000;
       padding: 30px;
       color: #ffffff;
       text-align: center; }

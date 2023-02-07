@@ -9,19 +9,14 @@
     "n-3 n-3 n-4 n-4"
     "n-5 n-5 n-6 n-6";
 
-  grid-row-gap: 25px;
-  grid-column-gap: 25px;
-  background: rgb(190, 130, 142);
-  background: linear-gradient(
-    90deg,
-    rgb(153, 65, 83) 2%,
-    rgba(204, 43, 62, 1) 39%,
-    rgba(130, 30, 32, 1) 64%
-  );
-  padding: 25px;
+  grid-row-gap: $Pixel;
+  grid-column-gap: $Pixel;
+  @include gradiente-roja;
+  padding: $Pixel;
 
   section {
     border-radius: 3%;
+    @include gradiente-gris;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   }
 
@@ -31,8 +26,8 @@
     font-family: "Roboto", sans-serif;
     font-family: "Saira Condensed", sans-serif;
 
-    font-size: 25px;
-    color: white;
+    font-size: $Pixel;
+    color: $colorBlanco;
     text-align: justify;
     padding: 15px;
   }
@@ -40,36 +35,25 @@
   .fondo {
     grid-area: t-0;
     img {
-      width: 100%;
+      width: $medida;
     }
   }
 
   .nosotros_h1 {
     grid-area: n-1;
-    background: #232526; /* fallback for old browsers */
-    background: -webkit-linear-gradient(
-      to right,
-      #414345,
-      #232526
-    ); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(
-      to right,
-      #414345,
-      #232526
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   .nosotros_h2 {
     grid-area: n-2;
     img {
-      width: 100%;
-      height: 100%;
+      width: $medida;
+      height: $medida;
     }
   }
 }
 .nosotros_h3 {
   grid-area: n-3;
   video {
-    width: 100%;
+    width: $medida;
   }
 }
 .nosotros_h4 {
@@ -88,11 +72,11 @@
   grid-area: n-6;
 
   img {
-    width: 100%;
+    width: $medida;
     height: auto;
   }
 }
-@media (max-width: 1300px) {
+@media screen and (max-width: 1300px) {
   #nosotros {
     grid-area: main;
     display: grid;
@@ -110,7 +94,7 @@
     }
   }
 }
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   #nosotros {
     grid-area: main;
     display: grid;

@@ -3,6 +3,27 @@
   grid-column: auto;
 }
 
+@mixin gradiente-gris {
+
+   background: #232526;
+  background: -webkit-linear-gradient(to right, #232526, #414345);
+  background: linear-gradient(to right, #232526, #414345);
+ 
+}
+
+@mixin gradiente-roja {
+
+  background: rgb(190, 130, 142);
+  background: linear-gradient(
+    90deg,
+    rgb(153, 65, 83) 2%,
+    rgba(204, 43, 62, 1) 39%,
+    rgba(130, 30, 32, 1) 64%
+  );
+
+}
+
+
 @mixin grillaMovile-1200-900 {
   width: $medida;
   height: auto;
@@ -14,6 +35,8 @@
     "main"
     "footer";
 }
+
+
 
 @mixin grillaMovile-600-300 {
   width: $medida;
